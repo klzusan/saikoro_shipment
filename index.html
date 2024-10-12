@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>配送金額計算</title>
+
+        <link rel="stylesheet" href="static/css/style.css">
+        <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">商品発送シミュレータ</h1>
+            <form class="row gx-3 gy-3 align-items-center" id="shippingForm">
+                <div class="form-group">
+                    <label for="weight">商品の重さ(g):</label><br>
+                    <input type="number" class="form-control" id="weight" name="weight" required><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="length">長辺の長さ(cm):</label><br>
+                    <input type="number" class="form-control" id="length" name="length" required><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="width">短辺の長さ(cm):</label><br>
+                    <input type="number" class="form-control" id="width" name="width" required><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="thickness">商品の厚さ(cm):</label><br>
+                    <input type="number" class="form-control" id="thickness" name="thickness" required><br><br>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary  w-auto" onclick="calcShip()">確定</button>
+                </div>
+                
+            </form>
+    
+            <br><br>
+            <h2 class="text-center mb-4">計算結果:</h2>
+            <p id="result" class="text-center"></p>
+        </div>
+        
+
+        <script src="script/script.js"></script>
+    </body>
+</html>
